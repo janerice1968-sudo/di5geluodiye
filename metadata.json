@@ -1,7 +1,9 @@
+
 {
-  "name": "Lumina Creative Atelier",
-  "description": "A sophisticated, high-end creative workspace focusing on intuitive design and artistic vision, free from the clutter of typical AI tools.",
+  "name": "Late Nights Vibe | Premium Private Sanctuary",
+  "description": "A digital sanctuary crafted for those seeking ultimate sensory experiences, providing high-definition private interactions and unrestricted artistic live streams.",
   "requestFramePermissions": [
-    "camera"
+    "camera",
+    "microphone"
   ]
 }

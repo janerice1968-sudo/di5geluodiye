@@ -15,27 +15,27 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-lumina-cream/80 backdrop-blur-md border-b border-lumina-charcoal/5">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-xl border-b border-white/5">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-lumina-charcoal rounded-full flex items-center justify-center">
-            <div className="w-3 h-3 bg-lumina-cream rounded-full"></div>
+        <div className="flex items-center space-x-3 group cursor-pointer" onClick={() => scrollTo('home')}>
+          <div className="w-8 h-8 bg-red-950 rounded-full flex items-center justify-center animate-pulse group-hover:scale-110 transition-transform">
+            <div className="w-2 h-2 bg-red-600 rounded-full shadow-[0_0_10px_#991b1b]"></div>
           </div>
-          <span className="font-serif text-xl tracking-tight font-bold">LUMINA</span>
+          <span className="font-serif text-xl tracking-tighter font-bold uppercase text-white">Late Nights Vibe</span>
         </div>
 
         <div className="hidden md:flex items-center space-x-12">
           {[
-            { id: 'home', label: 'The Origin' },
-            { id: 'philosophy', label: 'The Ethos' },
-            { id: 'gallery', label: 'The Archive' },
-            { id: 'experience', label: 'The Encounter' },
+            { id: 'home', label: 'Entrance' },
+            { id: 'philosophy', label: 'Rhythm' },
+            { id: 'gallery', label: 'Archives' },
+            { id: 'experience', label: 'Encounter' },
           ].map((item) => (
             <button
               key={item.id}
               onClick={() => scrollTo(item.id)}
-              className={`text-[10px] tracking-[0.3em] uppercase transition-colors duration-300 ${
-                activeSection === item.id ? 'text-lumina-gold' : 'text-lumina-charcoal/60 hover:text-lumina-charcoal'
+              className={`text-[11px] tracking-[0.4em] font-medium transition-all duration-300 uppercase ${
+                activeSection === item.id ? 'text-red-500' : 'text-white/40 hover:text-white'
               }`}
             >
               {item.label}
@@ -45,9 +45,9 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
 
         <button 
           onClick={() => scrollTo('experience')}
-          className="px-6 py-2 border border-lumina-charcoal text-[10px] tracking-[0.3em] uppercase hover:bg-lumina-charcoal hover:text-lumina-cream transition-all duration-500 shadow-sm"
+          className="px-6 py-2 border border-red-900 text-[10px] tracking-[0.3em] font-bold text-red-500 hover:bg-red-950 hover:text-white transition-all duration-500 uppercase rounded-sm"
         >
-          Enter the Silence
+          Private Access
         </button>
       </div>
     </nav>
