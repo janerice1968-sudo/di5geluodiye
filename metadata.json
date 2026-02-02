@@ -1,0 +1,7 @@
+{
+  "name": "Lumina Creative Atelier",
+  "description": "A sophisticated, high-end creative workspace focusing on intuitive design and artistic vision, free from the clutter of typical AI tools.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
