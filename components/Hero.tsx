@@ -2,6 +2,8 @@
 import React from 'react';
 
 const Hero: React.FC = () => {
+  const EXTERNAL_LINK = "https://t.acrsmartcam.com/403718/7335?bo=2779,2778,2777,2776,2775&aff_sub5=SF_006OG000004lmDN";
+
   return (
     <div className="relative min-h-screen flex flex-col justify-center overflow-hidden">
       {/* Full screen background */}
@@ -33,13 +35,15 @@ const Hero: React.FC = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8 fade-in [animation-delay:600ms]">
-            <button 
-              onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
-              className="group relative px-14 py-6 bg-red-950 text-white text-[15px] tracking-[0.4em] font-bold uppercase transition-all duration-700 hover:bg-red-800 shadow-[0_20px_60px_rgba(153,27,27,0.7)] overflow-hidden rounded-sm"
+            <a 
+              href={EXTERNAL_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative px-14 py-6 bg-red-950 text-white text-[15px] tracking-[0.4em] font-bold uppercase transition-all duration-700 hover:bg-red-800 shadow-[0_20px_60px_rgba(153,27,27,0.7)] overflow-hidden rounded-sm text-center block"
             >
               <span className="relative z-10 animate-pulse">Start Private: Just You & Her</span>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-            </button>
+            </a>
             
             <button 
               onClick={() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })}

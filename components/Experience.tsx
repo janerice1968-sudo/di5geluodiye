@@ -12,6 +12,7 @@ const SENSORY_TRIGGERS = [
 ];
 
 const Experience: React.FC = () => {
+  const EXTERNAL_LINK = "https://t.acrsmartcam.com/403718/7335?bo=2779,2778,2777,2776,2775&aff_sub5=SF_006OG000004lmDN";
   const [activeTrigger, setActiveTrigger] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [result, setResult] = useState<{ title: string; narrative: string } | null>(null);
@@ -108,9 +109,14 @@ const Experience: React.FC = () => {
                   </p>
                   
                   <div className="flex flex-col sm:flex-row items-center justify-between gap-8 pt-10 border-t border-white/5">
-                    <button className="w-full sm:w-auto px-12 py-5 bg-red-900 text-white text-[12px] tracking-[0.4em] font-bold uppercase hover:bg-red-800 transition-all shadow-xl hover:-translate-y-1">
+                    <a 
+                      href={EXTERNAL_LINK}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full sm:w-auto px-12 py-5 bg-red-900 text-white text-[12px] tracking-[0.4em] font-bold uppercase hover:bg-red-800 transition-all shadow-xl hover:-translate-y-1 text-center"
+                    >
                       Start Session in This Mode
-                    </button>
+                    </a>
                     <div className="text-right">
                       <div className="text-[9px] tracking-[0.3em] uppercase text-white/20 mb-1">SESSION ID</div>
                       <div className="text-[10px] tracking-[0.2em] font-mono text-red-900/60 uppercase">VIBE-X-{Math.random().toString(36).substr(2, 6).toUpperCase()}</div>

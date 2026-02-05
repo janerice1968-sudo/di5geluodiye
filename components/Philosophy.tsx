@@ -2,6 +2,8 @@
 import React from 'react';
 
 const Philosophy: React.FC = () => {
+  const EXTERNAL_LINK = "https://t.acrsmartcam.com/403718/7335?bo=2779,2778,2777,2776,2775&aff_sub5=SF_006OG000004lmDN";
+
   return (
     <div className="py-40 bg-lumina-charcoal text-white">
       <div className="max-w-7xl mx-auto px-6">
@@ -40,9 +42,14 @@ const Philosophy: React.FC = () => {
               />
               <div className="absolute inset-0 bg-red-950/40 group-hover:bg-transparent transition-colors duration-1000"></div>
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                 <button className="px-12 py-4 bg-white text-black text-[12px] tracking-widest uppercase font-bold shadow-2xl">
+                 <a 
+                    href={EXTERNAL_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-12 py-4 bg-white text-black text-[12px] tracking-widest uppercase font-bold shadow-2xl"
+                 >
                     Break the Barrier · Click to Start
-                 </button>
+                 </a>
               </div>
             </div>
           </div>

@@ -7,6 +7,8 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
+  const EXTERNAL_LINK = "https://t.acrsmartcam.com/403718/7335?bo=2779,2778,2777,2776,2775&aff_sub5=SF_006OG000004lmDN";
+
   const scrollTo = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -43,12 +45,14 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
           ))}
         </div>
 
-        <button 
-          onClick={() => scrollTo('experience')}
-          className="px-6 py-2 border border-red-900 text-[10px] tracking-[0.3em] font-bold text-red-500 hover:bg-red-950 hover:text-white transition-all duration-500 uppercase rounded-sm"
+        <a 
+          href={EXTERNAL_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-6 py-2 border border-red-900 text-[10px] tracking-[0.3em] font-bold text-red-500 hover:bg-red-950 hover:text-white transition-all duration-500 uppercase rounded-sm text-center"
         >
           Private Access
-        </button>
+        </a>
       </div>
     </nav>
   );

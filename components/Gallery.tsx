@@ -30,6 +30,8 @@ const COLLECTIONS: GalleryItem[] = [
 ];
 
 const Gallery: React.FC = () => {
+  const EXTERNAL_LINK = "https://t.acrsmartcam.com/403718/7335?bo=2779,2778,2777,2776,2775&aff_sub5=SF_006OG000004lmDN";
+
   return (
     <div className="py-48 bg-lumina-cream overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
@@ -58,9 +60,12 @@ const Gallery: React.FC = () => {
         {/* 2x2 Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-32">
           {COLLECTIONS.map((item, index) => (
-            <div 
+            <a 
               key={item.id} 
-              className={`group cursor-pointer relative ${index % 2 !== 0 ? 'md:translate-y-40' : ''}`}
+              href={EXTERNAL_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`group cursor-pointer relative block ${index % 2 !== 0 ? 'md:translate-y-40' : ''}`}
             >
               {/* Background Index */}
               <div className="absolute -top-12 -left-8 text-[12vw] font-serif text-red-900/[0.03] select-none pointer-events-none italic group-hover:text-red-900/[0.07] transition-all duration-1000">
@@ -106,17 +111,22 @@ const Gallery: React.FC = () => {
                   {item.category}
                 </p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
         <div className="mt-80 flex flex-col items-center">
           <div className="w-px h-32 bg-gradient-to-b from-lumina-charcoal/20 to-transparent mb-16"></div>
           
-          <button className="group relative px-28 py-8 bg-red-950 text-white text-[14px] tracking-[0.6em] font-bold uppercase transition-all duration-1000 hover:shadow-[0_40px_100px_-20px_rgba(153,27,27,0.6)] overflow-hidden">
+          <a 
+            href={EXTERNAL_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative px-28 py-8 bg-red-950 text-white text-[14px] tracking-[0.6em] font-bold uppercase transition-all duration-1000 hover:shadow-[0_40px_100px_-20px_rgba(153,27,27,0.6)] overflow-hidden text-center block"
+          >
             <span className="relative z-10">Explore Private Vault</span>
             <div className="absolute inset-0 bg-red-900 -translate-x-full group-hover:translate-x-0 transition-transform duration-700 ease-in-out"></div>
-          </button>
+          </a>
           
           <div className="mt-24 flex items-center space-x-12 opacity-40">
              <span className="text-[9px] tracking-[0.4em] uppercase font-bold">Curated by Late Nights Vibe</span>
