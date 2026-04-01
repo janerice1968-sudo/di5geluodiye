@@ -1,9 +1,0 @@
-
-{
-  "name": "Late Nights Vibe | Premium Private Sanctuary",
-  "description": "A digital sanctuary crafted for those seeking ultimate sensory experiences, providing high-definition private interactions and unrestricted artistic live streams.",
-  "requestFramePermissions": [
-    "camera",
-    "microphone"
-  ]
-}
